@@ -29,10 +29,9 @@ public class BasicTest1 {
 				.body(Payload.addPlace())
 				.when().log().all().post("maps/api/place/add/json").then().assertThat().statusCode(200)
 				.body("scope", equalTo("APP")).header("content-type", "application/json;charset=UTF-8").extract()
-				.response().asString(); // currently we cannot hard code Place id because it will be generated at
-										// runtime so we need to store it
+				.response().asString(); 
 		System.out.println("Response is " + response); // We are trying to Print the response here by converting it to
-														// asString() and Print that
+														// asString() and Print that ,because we are not using log method in then
 	}
 // WE ARE PASTING BODY HERE INSTED OF THIS NOW i CAN PREPARE ACLASS AND PASTE BODY THERE ANS CALL IT so no need to paste complete String in Body
 	public static void main(String[] args) {
