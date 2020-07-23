@@ -1,6 +1,6 @@
 package TESTAPI.APIRESTASSURED;
 
-public class Payload {
+public class Payloads {
 
 	public static String addPlace() {
 		return "{\r\n" + "  \"location\": {\r\n" + "    \"lat\": -38.383494,\r\n" + "    \"lng\": 33.427362\r\n"
@@ -10,6 +10,16 @@ public class Payload {
 				+ "    \"shop\"\r\n" + "  ],\r\n" + "  \"website\": \"http://google.com\",\r\n"
 				+ "  \"language\": \"French-IN\"\r\n" + "}\r\n" + "";
 
+	}
+	public static String addBook(String isbn ,String aisle) {
+ String bookResponse ="{\r\n" + 
+ 		"\r\n" + 
+ 		"\"name\":\"Learn Appium Automation with Java\",\r\n" + 
+ 		"\"isbn\":\""+isbn+"\",\r\n" + 
+ 		"\"aisle\":\""+aisle+"\",\r\n" + 
+ 		"\"author\":\"John foe\"\r\n" + 
+ 		"}";
+ return bookResponse;
 	}
 
 }

@@ -4,7 +4,7 @@ import io.restassured.RestAssured;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
-import TESTAPI.APIRESTASSURED.Payload;
+import TESTAPI.APIRESTASSURED.Payloads;
 
 public class BasicTest1 {
 
@@ -26,7 +26,7 @@ public class BasicTest1 {
 	public static void MoreValidationsInRensponse() {
 		RestAssured.baseURI = "https://rahulshettyacademy.com";
 		String response = given().queryParam("key", "qaclick123").header("Content-Type", "application/json").log().all()
-				.body(Payload.addPlace())
+				.body(Payloads.addPlace())
 				.when().log().all().post("maps/api/place/add/json").then().assertThat().statusCode(200)
 				.body("scope", equalTo("APP")).header("content-type", "application/json;charset=UTF-8").extract()
 				.response().asString(); 

@@ -3,7 +3,7 @@ package Basic.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
-import TESTAPI.APIRESTASSURED.Payload;
+import TESTAPI.APIRESTASSURED.Payloads;
 import TESTAPI.APIRESTASSURED.Utilities;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
@@ -17,7 +17,7 @@ public class MoreValidationsInRensponse {
 	public static void main(String[] args) {
 		RestAssured.baseURI = "https://rahulshettyacademy.com";
 		String response = given().queryParam("key", "qaclick123").header("Content-Type", "application/json").log().all()
-				.body(Payload.addPlace()).when().post("maps/api/place/add/json").then().log().all().assertThat()
+				.body(Payloads.addPlace()).when().post("maps/api/place/add/json").then().log().all().assertThat()
 				.statusCode(200).body("scope", equalTo("APP")).header("content-type", "application/json;charset=UTF-8")
 				.extract().response().asString(); // currently we cannot hard code Place id because it will be generated
 // at runtime so we need to store it. so using JsonPath also to add I'm using log() as well as converting response to String so it will print response body 2 times 

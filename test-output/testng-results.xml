@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="2125" started-at="2020-07-23T13:52:43Z" finished-at="2020-07-23T13:52:45Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="2125" started-at="2020-07-23T13:52:43Z" finished-at="2020-07-23T13:52:45Z">
+      <class name="Basic.Test.BasicTest3">
+        <test-method status="PASS" signature="addBook()[pri:0, instance:Basic.Test.BasicTest3@3884b2]" name="addBook" duration-ms="2102" started-at="2020-07-23T13:52:43Z" finished-at="2020-07-23T13:52:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBook -->
+      </class> <!-- Basic.Test.BasicTest3 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
