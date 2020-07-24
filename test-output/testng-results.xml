@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2062" started-at="2020-07-24T07:52:55Z" finished-at="2020-07-24T07:52:57Z">
+  <suite name="Default suite" duration-ms="2871" started-at="2020-07-24T14:49:31Z" finished-at="2020-07-24T14:49:34Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2062" started-at="2020-07-24T07:52:55Z" finished-at="2020-07-24T07:52:57Z">
-      <class name="Basic.Test.BasicTest4">
-        <test-method status="PASS" signature="addBook()[pri:0, instance:Basic.Test.BasicTest4@3884b2]" name="addBook" duration-ms="2038" started-at="2020-07-24T07:52:55Z" finished-at="2020-07-24T07:52:57Z">
+    <test name="Default test" duration-ms="2871" started-at="2020-07-24T14:49:31Z" finished-at="2020-07-24T14:49:34Z">
+      <class name="Basic.Test.Basic_POJO">
+        <test-method status="PASS" signature="PostPojo()[pri:1, instance:Basic.Test.Basic_POJO@3884b2]" name="PostPojo" duration-ms="2307" started-at="2020-07-24T14:49:31Z" finished-at="2020-07-24T14:49:33Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addBook -->
-      </class> <!-- Basic.Test.BasicTest4 -->
+        </test-method> <!-- PostPojo -->
+        <test-method status="PASS" signature="GetPojo()[pri:2, instance:Basic.Test.Basic_POJO@3884b2]" name="GetPojo" duration-ms="540" started-at="2020-07-24T14:49:33Z" finished-at="2020-07-24T14:49:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetPojo -->
+      </class> <!-- Basic.Test.Basic_POJO -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
