@@ -10,7 +10,7 @@ public class ComplexJson {
 	
 	public static void main(String[] args) {
 		
-		JsonPath js = Utilities.rawtoJson(Mock.coursePrice());
+		JsonPath js = new JsonPath(Mock.coursePrice());
 		int count = js.get("courses.size()");
 		System.out.println("courses count is " + count); // 1.
 		int purchaseamount = js.get("dashboard.purchaseAmount"); // 2

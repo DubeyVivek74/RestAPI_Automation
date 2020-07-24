@@ -1,5 +1,7 @@
 package TESTAPI.APIRESTASSURED;
 
+import io.restassured.response.Response;
+
 public class Mock {
 	
 	public static String coursePrice() {

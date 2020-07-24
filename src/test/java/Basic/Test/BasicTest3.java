@@ -12,6 +12,7 @@ import TESTAPI.APIRESTASSURED.Payloads;
 import TESTAPI.APIRESTASSURED.Utilities;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
 
 public class BasicTest3 {
 	// THIS CLASS WILL TAKE PAYLOAD FROM EXTERNAL FILE AND PASS AS ARGUEMENTS TO
@@ -22,13 +23,13 @@ public class BasicTest3 {
 	public void addBook() throws IOException {
 
 		RestAssured.baseURI = "http://216.10.245.166";
-		String response = given().header("Content-Type", "application/json")
+		Response response = given().header("Content-Type", "application/json")
 				.body(BasicTest3
 						.GenerateString("C:\\Users\\Lenovo\\Desktop\\ApiAutomation\\APIRESTASSURED\\payload.json"))
 				.log().all()
 
 				.when().log().all().post("/Library/Addbook.php").then().log().all().assertThat().statusCode(200)
-				.extract().response().asString(); // body("ID",equalTo("bsckd9127"))
+				.extract().response(); // body("ID",equalTo("bsckd9127"))
 		System.out.println(response);
 		JsonPath js = Utilities.rawtoJson(response);
 		String bookId = js.get("ID");

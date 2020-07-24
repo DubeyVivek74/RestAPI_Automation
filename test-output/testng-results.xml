@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2125" started-at="2020-07-23T13:52:43Z" finished-at="2020-07-23T13:52:45Z">
+  <suite name="Default suite" duration-ms="2062" started-at="2020-07-24T07:52:55Z" finished-at="2020-07-24T07:52:57Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2125" started-at="2020-07-23T13:52:43Z" finished-at="2020-07-23T13:52:45Z">
-      <class name="Basic.Test.BasicTest3">
-        <test-method status="PASS" signature="addBook()[pri:0, instance:Basic.Test.BasicTest3@3884b2]" name="addBook" duration-ms="2102" started-at="2020-07-23T13:52:43Z" finished-at="2020-07-23T13:52:45Z">
+    <test name="Default test" duration-ms="2062" started-at="2020-07-24T07:52:55Z" finished-at="2020-07-24T07:52:57Z">
+      <class name="Basic.Test.BasicTest4">
+        <test-method status="PASS" signature="addBook()[pri:0, instance:Basic.Test.BasicTest4@3884b2]" name="addBook" duration-ms="2038" started-at="2020-07-24T07:52:55Z" finished-at="2020-07-24T07:52:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook -->
-      </class> <!-- Basic.Test.BasicTest3 -->
+      </class> <!-- Basic.Test.BasicTest4 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

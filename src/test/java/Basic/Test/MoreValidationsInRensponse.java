@@ -7,6 +7,7 @@ import TESTAPI.APIRESTASSURED.Payloads;
 import TESTAPI.APIRESTASSURED.Utilities;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
 import junit.framework.Assert;
 
 public class MoreValidationsInRensponse {
@@ -24,7 +25,7 @@ public class MoreValidationsInRensponse {
 		System.out.println("Response is " + response.toString());
 		JsonPath js = new JsonPath(response);
 		String place_id = js.get("place_id");
-		System.out.println(place_id);
+		System.out.println("**********"+place_id);
 		
 		//To update address  we are using PUT 
 		String newAddress ="Old Slough ,UK";
@@ -40,9 +41,9 @@ public class MoreValidationsInRensponse {
 		
 		 // To retrive the updated Address we are using GET
 		  
-		String getResponse=  given().queryParam("key", "qaclick123").queryParam("place_id",place_id).log().all()
+		Response getResponse=  given().queryParam("key", "qaclick123").queryParam("place_id",place_id).log().all()
 		   .when().get("/maps/api/place/get/json")
-		  .then().assertThat().statusCode(200).extract().response().asString();
+		  .then().assertThat().statusCode(200).extract().response();
 		//JsonPath js1 =new JsonPath(getResponse);  /// we will create re-use able method for JSONPath 
 		   JsonPath js1=  Utilities.rawtoJson(getResponse);
 		String updatedAddress =js1.get("address").toString();
